@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bharathi Furniture</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <!-- HEADER -->
+  <header class="header">
+    <a href="#" class="logo">
+      Bharathi <span>Furniture</span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="collection.html">Collections</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="#contact" class="header-btn">Visit Showroom</a>
+  </header>
+  <!-- =========================================
+     COLLECTION PAGE HERO
+========================================= -->
+
+<section class="collection-hero">
+
+  <div class="collection-hero-bg"></div>
+
+  <div class="collection-hero-overlay"></div>
+
+  <div class="collection-hero-content">
+
+    <span class="collection-eyebrow">
+      BHARATHI FURNITURE
+    </span>
+
+    <h1>
+      Discover Furniture
+      <em>Made for Your Space.</em>
+    </h1>
+
+    <p>
+      Explore thoughtfully designed sofas, beds, dining collections
+      and timeless furniture crafted to bring comfort and elegance
+      into every corner of your home.
+    </p>
+
+    <div class="collection-breadcrumb">
+
+      <a href="index.html">Home</a>
+
+      <span>•</span>
+
+      <p>Collections</p>
+
+    </div>
+
+  </div>
+
+
+  <!-- BOTTOM COLLECTION INFO -->
+
+  <div class="collection-hero-bottom">
+
+    <div class="collection-number">
+      <span>03</span>
+
+      <div></div>
+
+      <p>Our Collections</p>
+    </div>
+
+
+    <a href="#sofaCollection" class="collection-scroll">
+      Explore Collection
+      <span>↓</span>
+    </a>
+
+  </div>
+
+</section>
+<!-- =========================
+     SOFA COLLECTION SECTION
+========================== -->
+
+<section class="sofa-showcase">
+
+  <div class="sofa-showcase-wrapper">
+
+    <!-- LEFT CONTENT -->
+    <div class="sofa-content">
+
+      <span class="section-tag">SOFA COLLECTION</span>
+
+      <h1>
+        Comfort Meets
+        <span>Elegant Living.</span>
+      </h1>
+
+      <p>
+        Discover our premium sofa collection designed with elegant
+        silhouettes, soft textures and everyday comfort for your living room.
+      </p>
+
+      <a href="contact.html" class="sofa-btn">
+        Enquire Now
+        <span>→</span>
+      </a>
+
+    </div>
+
+
+    <!-- RIGHT IMAGE AREA -->
+    <div class="sofa-gallery">
+
+      <!-- MAIN IMAGE -->
+      <div class="sofa-main-image">
+
+        <img
+          id="mainSofaImage"
+          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=90"
+          alt="Premium Sofa"
+        >
+
+        <div class="sofa-image-label">
+          <span>01</span>
+
+          <div>
+            <h3 id="mainSofaTitle">Luxe Comfort Sofa</h3>
+            <p>Premium Living Collection</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- THUMBNAILS -->
+      <div class="sofa-thumbnails">
+
+        <button
+          class="sofa-thumb active"
+          onclick="changeSofa(
+            'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=90',
+            'Luxe Comfort Sofa',
+            this
+          )"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=500&q=85"
+            alt="Sofa One"
+          >
+
+          <span>01</span>
+        </button>
+
+
+        <button
+          class="sofa-thumb"
+          onclick="changeSofa(
+            'https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1400&q=90',
+            'Modern Lounge Sofa',
+            this
+          )"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=500&q=85"
+            alt="Sofa Two"
+          >
+
+          <span>02</span>
+        </button>
+
+
+        <button
+          class="sofa-thumb"
+          onclick="changeSofa(
+            'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=90',
+            'Signature Brown Sofa',
+            this
+          )"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=500&q=85"
+            alt="Sofa Three"
+          >
+
+          <span>03</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     FURNITURE CATEGORY CARDS
+========================================= -->
+
+<section class="furniture-categories">
+
+  <div class="category-section-head">
+
+    <div>
+      <span class="category-eyebrow">
+        EXPLORE OUR COLLECTION
+      </span>
+
+      <h2>
+        Furniture for
+        <em>Every Space.</em>
+      </h2>
+    </div>
+
+    <p>
+      Discover thoughtfully designed furniture collections
+      created for comfort, elegance and modern living.
+    </p>
+
+  </div>
+
+
+  <div class="furniture-category-grid">
+
+
+    <!-- CARD 1 -->
+
+    <a href="#sofaCollection" class="furniture-category-card">
+
+      <div class="category-card-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=90"
+          alt="Living Room Furniture"
+        >
+
+      </div>
+
+      <div class="category-card-number">
+        01
+      </div>
+
+
+      <div class="category-card-content">
+
+        <span>
+          COLLECTION
+        </span>
+
+        <h3>
+          Living Room
+        </h3>
+
+        <p>
+          Sofas, recliners and elegant seating designed
+          for comfortable everyday living.
+        </p>
+
+        <div class="category-card-link">
+          Explore Collection
+
+          <i>→</i>
+        </div>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- CARD 2 -->
+
+    <a href="#" class="furniture-category-card">
+
+      <div class="category-card-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=90"
+          alt="Bedroom Furniture"
+        >
+
+      </div>
+
+      <div class="category-card-number">
+        02
+      </div>
+
+
+      <div class="category-card-content">
+
+        <span>
+          COLLECTION
+        </span>
+
+        <h3>
+          Bedroom
+        </h3>
+
+        <p>
+          Elegant beds and bedroom furniture created
+          for peaceful and beautiful spaces.
+        </p>
+
+        <div class="category-card-link">
+          Explore Collection
+
+          <i>→</i>
+        </div>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- CARD 3 -->
+
+    <a href="#" class="furniture-category-card">
+
+      <div class="category-card-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1000&q=90"
+          alt="Dining Furniture"
+        >
+
+      </div>
+
+      <div class="category-card-number">
+        03
+      </div>
+
+
+      <div class="category-card-content">
+
+        <span>
+          COLLECTION
+        </span>
+
+        <h3>
+          Dining
+        </h3>
+
+        <p>
+          Dining tables and chairs designed to bring
+          people together beautifully.
+        </p>
+
+        <div class="category-card-link">
+          Explore Collection
+
+          <i>→</i>
+        </div>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- CARD 4 -->
+
+    <a href="#" class="furniture-category-card">
+
+      <div class="category-card-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=90"
+          alt="Office Furniture"
+        >
+
+      </div>
+
+      <div class="category-card-number">
+        04
+      </div>
+
+
+      <div class="category-card-content">
+
+        <span>
+          COLLECTION
+        </span>
+
+        <h3>
+          Office
+        </h3>
+
+        <p>
+          Smart desks and seating solutions for productive,
+          modern working spaces.
+        </p>
+
+        <div class="category-card-link">
+          Explore Collection
+
+          <i>→</i>
+        </div>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- CARD 5 -->
+
+    <a href="#" class="furniture-category-card">
+
+      <div class="category-card-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=1000&q=90"
+          alt="Recliner Furniture"
+        >
+
+      </div>
+
+      <div class="category-card-number">
+        05
+      </div>
+
+
+      <div class="category-card-content">
+
+        <span>
+          COLLECTION
+        </span>
+
+        <h3>
+          Recliners
+        </h3>
+
+        <p>
+          Relax in premium recliners designed for
+          comfort and timeless style.
+        </p>
+
+        <div class="category-card-link">
+          Explore Collection
+
+          <i>→</i>
+        </div>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- CARD 6 -->
+
+    <a href="#" class="furniture-category-card">
+
+      <div class="category-card-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=90"
+          alt="Storage Furniture"
+        >
+
+      </div>
+
+      <div class="category-card-number">
+        06
+      </div>
+
+
+      <div class="category-card-content">
+
+        <span>
+          COLLECTION
+        </span>
+
+        <h3>
+          Storage
+        </h3>
+
+        <p>
+          Beautiful storage solutions designed to keep
+          your home stylish and organized.
+        </p>
+
+        <div class="category-card-link">
+          Explore Collection
+
+          <i>→</i>
+        </div>
+
+      </div>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+   <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <h2>Bharathi <span>Furniture</span></h2>
+
+        <p>
+          Elegant furniture designed to make
+          every home more beautiful.
+        </p>
+      </div>
+
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Collections</a>
+        <a href="#">Products</a>
+      </div>
+
+
+      <div class="footer-column">
+        <h3>Collections</h3>
+        <a href="#">Living Room</a>
+        <a href="#">Bedroom</a>
+        <a href="#">Dining</a>
+        <a href="#">Office</a>
+      </div>
+
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Madurai, Tamil Nadu</p>
+        <p>+91 00000 00000</p>
+        <p>info@bharathifurniture.com</p>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      <p>© 2026 Bharathi Furniture. All Rights Reserved.</p>
+      <p>Designed with elegance.</p>
+    </div>
+
+  </footer>
+  <script>
+
+function changeSofa(image, title, clickedThumb) {
+
+  const mainImage =
+    document.getElementById("mainSofaImage");
+
+  const mainTitle =
+    document.getElementById("mainSofaTitle");
+
+
+  /* FADE OLD IMAGE */
+
+  mainImage.style.opacity = "0";
+
+  mainImage.style.transform = "scale(1.03)";
+
+
+  setTimeout(() => {
+
+    mainImage.src = image;
+
+    mainTitle.textContent = title;
+
+    mainImage.style.opacity = "1";
+
+    mainImage.style.transform = "scale(1)";
+
+  }, 250);
+
+
+  /* REMOVE ACTIVE */
+
+  document
+    .querySelectorAll(".sofa-thumb")
+    .forEach((thumb) => {
+
+      thumb.classList.remove("active");
+
+    });
+
+
+  /* ACTIVE CLICKED IMAGE */
+
+  clickedThumb.classList.add("active");
+
+}
+
+</script>
+</body>
+</html>
