@@ -18,21 +18,53 @@
 <body>
 
  <!-- HEADER -->
-  <header class="header">
-    <a href="#" class="logo">
-      Bharathi <span>Furniture</span>
+<header class="header">
+
+  <a href="index.html" class="logo">
+    Bharathi <span>Furniture</span>
+  </a>
+
+  <nav class="nav" id="mobileNav">
+
+    <a href="index.html">
+      Home
     </a>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="collection.html">Collections</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <a href="about.html" class="active">About</a>
 
-    <a href="#contact" class="header-btn">Visit Showroom</a>
-  </header>
+    <a href="collection.html">
+      Collections
+    </a>
+
+    <a href="products.html">
+      Products
+    </a>
+
+    <a href="contact.html">
+      Contact
+    </a>
+
+  </nav>
+
+  <a href="contact.html" class="header-btn">
+    Visit Showroom
+  </a>
+
+  <!-- MOBILE TOGGLE BUTTON -->
+  <button
+    class="menu-toggle"
+    id="menuToggle"
+    type="button"
+    aria-label="Open menu"
+    aria-expanded="false"
+    aria-controls="mobileNav"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</header>
 
 
 <!-- =========================================
@@ -85,6 +117,32 @@
     </div>
 
   </section>
+  
+
+  <section class="scrolling-text-section">
+  <div class="scrolling-text-track">
+
+    <div class="scrolling-text-content">
+      <span>Premium Quality Furniture</span>
+      <i>◆</i>
+      <span>Timeless Designs</span>
+      <i>◆</i>
+      <span>Made for Comfortable Living</span>
+      <i>◆</i>
+    </div>
+
+    <!-- Duplicate for continuous scrolling -->
+    <div class="scrolling-text-content" aria-hidden="true">
+      <span>Premium Quality Furniture</span>
+      <i>◆</i>
+      <span>Timeless Designs</span>
+      <i>◆</i>
+      <span>Made for Comfortable Living</span>
+      <i>◆</i>
+    </div>
+
+  </div>
+</section>
 
 
 <section class="bharathi-about" id="about ">
@@ -135,12 +193,6 @@
     <p class="about-description">
       At Bharathi Furniture, we believe every home deserves furniture
       that combines comfort, quality and timeless design.
-    </p>
-
-    <p class="about-description">
-      From elegant living room collections to beautifully crafted
-      bedroom and dining furniture, every piece is selected to make
-      your everyday spaces feel more special.
     </p>
 
 
@@ -773,6 +825,94 @@ missionCards.forEach(
 
   }
 );
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuToggle =
+    document.getElementById("menuToggle");
+
+  const mobileNav =
+    document.getElementById("mobileNav");
+
+  if (!menuToggle || !mobileNav) {
+    return;
+  }
+
+
+  function closeMobileMenu() {
+    menuToggle.classList.remove("active");
+    mobileNav.classList.remove("open");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    document.body.style.overflow = "";
+  }
+
+
+  menuToggle.addEventListener(
+    "click",
+    function () {
+
+      const menuIsOpen =
+        mobileNav.classList.toggle("open");
+
+      menuToggle.classList.toggle(
+        "active",
+        menuIsOpen
+      );
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(menuIsOpen)
+      );
+
+      document.body.style.overflow =
+        menuIsOpen ? "hidden" : "";
+
+    }
+  );
+
+
+  mobileNav
+    .querySelectorAll("a")
+    .forEach(function (link) {
+
+      link.addEventListener(
+        "click",
+        closeMobileMenu
+      );
+
+    });
+
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (event.key === "Escape") {
+        closeMobileMenu();
+      }
+
+    }
+  );
+
+
+  window.addEventListener(
+    "resize",
+    function () {
+
+      if (window.innerWidth > 768) {
+        closeMobileMenu();
+      }
+
+    }
+  );
+
+});
 </script>
 
 </body>
