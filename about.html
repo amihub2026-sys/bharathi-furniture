@@ -197,7 +197,7 @@
   </div>
 
 </div>
-
+  
 
     <!-- FEATURES -->
     <div class="about-features">
@@ -229,6 +229,135 @@
       Explore More
       <span>→</span>
     </a>
+
+  </div>
+
+</section>
+<!-- =========================================================
+     OUR MISSION & VISION
+========================================================= -->
+
+<section class="mission-vision-section">
+
+  <div class="mission-vision-heading mission-vision-reveal">
+
+    <span>
+      OUR DIRECTION
+    </span>
+
+    <h2>
+      Built with purpose.
+      <em>Driven by vision.</em>
+    </h2>
+
+    <p>
+      Our mission and vision guide every furniture collection,
+      every customer interaction and every home we help transform.
+    </p>
+
+  </div>
+
+
+  <div class="mission-vision-grid">
+
+    <!-- MISSION -->
+    <article class="mission-vision-card mission-card mission-vision-reveal">
+
+      <div class="mission-vision-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="8"></circle>
+          <circle cx="12" cy="12" r="4"></circle>
+          <circle cx="12" cy="12" r="1"></circle>
+        </svg>
+
+      </div>
+
+
+      <span class="mission-vision-number">
+        01
+      </span>
+
+
+      <span class="mission-vision-label">
+        OUR MISSION
+      </span>
+
+
+      <h3>
+        Making beautiful furniture
+        accessible for every home.
+      </h3>
+
+
+      <p>
+        Our mission is to provide stylish, comfortable and dependable
+        furniture that improves everyday living while offering customers
+        a smooth and trustworthy buying experience.
+      </p>
+
+
+      <div class="mission-vision-points">
+
+        <span>Quality Furniture</span>
+
+        <span>Comfort-Focused Design</span>
+
+        <span>Customer-First Service</span>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- VISION -->
+    <article class="mission-vision-card vision-card mission-vision-reveal">
+
+      <div class="mission-vision-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+
+      </div>
+
+
+      <span class="mission-vision-number">
+        02
+      </span>
+
+
+      <span class="mission-vision-label">
+        OUR VISION
+      </span>
+
+
+      <h3>
+        To become a trusted name
+        in complete furniture solutions.
+      </h3>
+
+
+      <p>
+        Our vision is to create inspiring furniture experiences where
+        customers can discover everything they need for living rooms,
+        bedrooms, dining areas, offices and complete homes.
+      </p>
+
+
+      <div class="mission-vision-points">
+
+        <span>Complete Home Solutions</span>
+
+        <span>Timeless Collections</span>
+
+        <span>Long-Term Customer Trust</span>
+
+      </div>
+
+    </article>
 
   </div>
 
@@ -561,7 +690,90 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+const missionVisionItems =
+  document.querySelectorAll(
+    ".mission-vision-reveal"
+  );
 
+
+const missionVisionObserver =
+  new IntersectionObserver(
+
+    function (
+      entries,
+      observer
+    ) {
+
+      entries.forEach(
+        function (entry) {
+
+          if (
+            entry.isIntersecting
+          ) {
+
+            entry.target
+              .classList
+              .add("show");
+
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        }
+      );
+
+    },
+
+    {
+      threshold: 0.18
+    }
+
+  );
+
+
+missionVisionItems.forEach(
+  function (item) {
+
+    missionVisionObserver
+      .observe(item);
+
+  }
+);
+const missionCards =
+  document.querySelectorAll(
+    ".mission-vision-card"
+  );
+
+
+missionCards.forEach(
+  function(card) {
+
+    card.addEventListener(
+      "click",
+      function() {
+
+        missionCards.forEach(
+          function(item) {
+            item.classList.remove(
+              "active-card"
+            );
+          }
+        );
+
+
+        card.classList.add(
+          "active-card"
+        );
+
+      }
+    );
+
+  }
+);
 </script>
+
 </body>
 </html>

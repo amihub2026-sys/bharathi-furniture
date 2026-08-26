@@ -19,21 +19,57 @@
 <body>
 
   <!-- HEADER -->
-  <header class="header">
-    <a href="#" class="logo">
-      Bharathi <span>Furniture</span>
+ <header class="header">
+
+  <a href="index.html" class="logo">
+    Bharathi <span>Furniture</span>
+  </a>
+
+  <nav class="nav" id="mobileNav">
+
+    <a href="index.html" class="active">
+      Home
     </a>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="collection.html">Collections</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <a href="about.html">
+      About
+    </a>
 
-    <a href="#contact" class="header-btn">Visit Showroom</a>
-  </header>
+    <a href="collection.html">
+      Collections
+    </a>
+
+    <a href="products.html">
+      Products
+    </a>
+
+    <a href="contact.html">
+      Contact
+    </a>
+
+  </nav>
+
+
+  <a href="contact.html" class="header-btn">
+    Visit Showroom
+  </a>
+
+
+  <!-- MOBILE HAMBURGER -->
+  <button
+    class="menu-toggle"
+    id="menuToggle"
+    aria-label="Open menu"
+    aria-expanded="false"
+  >
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </button>
+
+</header>
 
 
   <!-- HERO -->
@@ -118,66 +154,261 @@
 
 
   <!-- CATEGORIES -->
-  <section class="categories section" id="collections">
+ <section class="categories section" id="collections">
 
-    <div class="section-heading">
-      <div>
-        <span class="section-label">SHOP BY SPACE</span>
-        <h2>Collections made for your lifestyle.</h2>
+  <div class="section-heading">
+
+    <div>
+      <span class="section-label">SHOP BY SPACE</span>
+      <h2>Collections made for your lifestyle.</h2>
+    </div>
+
+    <p>
+      Discover carefully curated furniture collections created
+      for every room in your home.
+    </p>
+
+  </div>
+
+
+  <div class="category-grid">
+
+    <!-- =========================
+         LIVING ROOM
+    ========================== -->
+
+    <article class="category-flip-card category-large">
+
+      <div class="category-flip-inner">
+
+        <!-- FRONT -->
+        <div class="category-flip-front">
+
+          <img
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=85"
+            alt="Living room furniture"
+          />
+
+          <div class="category-front-overlay"></div>
+
+          <div class="category-front-content">
+            <span>01</span>
+            <h3>Living Room</h3>
+
+            <small>
+              Hover to explore →
+            </small>
+          </div>
+
+        </div>
+
+
+        <!-- BACK -->
+        <div class="category-flip-back">
+
+          <span class="category-back-number">
+            01
+          </span>
+
+          <div>
+
+            <span class="category-back-label">
+              LIVING COLLECTION
+            </span>
+
+            <h3>
+              Living Room
+            </h3>
+
+            <p>
+              Create a welcoming living space with premium sofas,
+              recliners, center tables, TV units and elegant
+              accent furniture.
+            </p>
+
+            <div class="category-back-items">
+              <span>Sofas</span>
+              <span>Recliners</span>
+              <span>TV Units</span>
+              <span>Center Tables</span>
+            </div>
+
+          </div>
+
+          <a href="collection.html">
+            Explore Collection
+            <span>→</span>
+          </a>
+
+        </div>
+
       </div>
 
-      <p>
-        Discover carefully curated furniture collections created
-        for every room in your home.
-      </p>
-    </div>
+    </article>
 
 
-    <div class="category-grid">
 
-      <article class="category-card category-large">
-        <img
-          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=85"
-          alt="Living room furniture"
-        />
+    <!-- =========================
+         BEDROOM
+    ========================== -->
 
-        <div class="category-content">
-          <span>01</span>
-          <h3>Living Room</h3>
-          <a href="#">Explore Collection →</a>
+    <article class="category-flip-card">
+
+      <div class="category-flip-inner">
+
+        <!-- FRONT -->
+        <div class="category-flip-front">
+
+          <img
+            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85"
+            alt="Bedroom furniture"
+          />
+
+          <div class="category-front-overlay"></div>
+
+          <div class="category-front-content">
+
+            <span>02</span>
+
+            <h3>
+              Bedroom
+            </h3>
+
+            <small>
+              Hover to explore →
+            </small>
+
+          </div>
+
         </div>
-      </article>
 
 
-      <article class="category-card">
-        <img
-          src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85"
-          alt="Bedroom furniture"
-        />
+        <!-- BACK -->
+        <div class="category-flip-back">
 
-        <div class="category-content">
-          <span>02</span>
-          <h3>Bedroom</h3>
-          <a href="#">Explore Collection →</a>
+          <span class="category-back-number">
+            02
+          </span>
+
+          <div>
+
+            <span class="category-back-label">
+              BEDROOM COLLECTION
+            </span>
+
+            <h3>
+              Bedroom
+            </h3>
+
+            <p>
+              Build a calm and comfortable bedroom with beautifully
+              designed beds, wardrobes, side tables and practical
+              storage solutions.
+            </p>
+
+            <div class="category-back-items">
+              <span>Beds</span>
+              <span>Wardrobes</span>
+              <span>Side Tables</span>
+              <span>Dressers</span>
+            </div>
+
+          </div>
+
+          <a href="collection.html">
+            Explore Collection
+            <span>→</span>
+          </a>
+
         </div>
-      </article>
+
+      </div>
+
+    </article>
 
 
-      <article class="category-card">
-        <img
-          src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1000&q=85"
-          alt="Dining furniture"
-        />
 
-        <div class="category-content">
-          <span>03</span>
-          <h3>Dining</h3>
-          <a href="#">Explore Collection →</a>
+    <!-- =========================
+         DINING
+    ========================== -->
+
+    <article class="category-flip-card">
+
+      <div class="category-flip-inner">
+
+        <!-- FRONT -->
+        <div class="category-flip-front">
+
+          <img
+            src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1000&q=85"
+            alt="Dining furniture"
+          />
+
+          <div class="category-front-overlay"></div>
+
+          <div class="category-front-content">
+
+            <span>03</span>
+
+            <h3>
+              Dining
+            </h3>
+
+            <small>
+              Hover to explore →
+            </small>
+
+          </div>
+
         </div>
-      </article>
 
-    </div>
-  </section>
+
+        <!-- BACK -->
+        <div class="category-flip-back">
+
+          <span class="category-back-number">
+            03
+          </span>
+
+          <div>
+
+            <span class="category-back-label">
+              DINING COLLECTION
+            </span>
+
+            <h3>
+              Dining
+            </h3>
+
+            <p>
+              Make every meal more memorable with dining tables,
+              comfortable chairs, benches and stylish dining
+              storage furniture.
+            </p>
+
+            <div class="category-back-items">
+              <span>Dining Tables</span>
+              <span>Chairs</span>
+              <span>Benches</span>
+              <span>Storage</span>
+            </div>
+
+          </div>
+
+          <a href="collection.html">
+            Explore Collection
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
 
 
   <!-- ABOUT -->
@@ -823,6 +1054,117 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
 });
+
+</script>
+<script>
+
+const categoryFlipCards =
+  document.querySelectorAll(
+    ".category-flip-card"
+  );
+
+
+categoryFlipCards.forEach(
+  function (card) {
+
+    card.addEventListener(
+      "click",
+      function (event) {
+
+        if (
+          window.innerWidth <= 700
+        ) {
+
+          if (
+            event.target.closest("a")
+          ) {
+            return;
+          }
+
+          card.classList.toggle(
+            "is-flipped"
+          );
+
+        }
+
+      }
+    );
+
+  }
+);
+
+
+const menuToggle =
+  document.getElementById(
+    "menuToggle"
+  );
+
+const mobileNav =
+  document.getElementById(
+    "mobileNav"
+  );
+
+
+menuToggle.addEventListener(
+  "click",
+  function () {
+
+    menuToggle.classList.toggle(
+      "active"
+    );
+
+    mobileNav.classList.toggle(
+      "open"
+    );
+
+
+    const isOpen =
+      mobileNav.classList.contains(
+        "open"
+      );
+
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      isOpen
+    );
+
+
+    document.body.style.overflow =
+      isOpen
+        ? "hidden"
+        : "";
+
+  }
+);
+
+
+/* CLOSE MENU AFTER LINK CLICK */
+
+mobileNav
+  .querySelectorAll("a")
+  .forEach(function (link) {
+
+    link.addEventListener(
+      "click",
+      function () {
+
+        menuToggle.classList.remove(
+          "active"
+        );
+
+        mobileNav.classList.remove(
+          "open"
+        );
+
+        document.body.style.overflow =
+          "";
+
+      }
+    );
+
+  });
+
 
 </script>
 
