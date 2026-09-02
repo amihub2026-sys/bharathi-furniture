@@ -8704,6 +8704,7 @@ button, a {
 
 .lifestyle-content > span {
   display: block;
+}
 @media ( max-width: 850px ) {
   
    .mission-vision-section {
@@ -8823,13 +8824,7 @@ button, a {
     grid-template-columns: 1fr;
   }
 
-  margin-bottom: 12px;
 
-  font-size: 9px;
-
-  letter-spacing: 2px;
-
-  color: rgba(255,255,255,.6);
 }
 
 
@@ -10059,6 +10054,7 @@ button, a {
   max-width: 850px;
 
   padding: 50px 25px;
+}
 @media (max-width: 700px) {
   .contact-social-strip {
     width: 100%;
