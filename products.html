@@ -27,9 +27,9 @@
 
   <header class="header">
 
-    <a href="index.html" class="logo">
-      Bharathi <span>Furniture</span>
-    </a>
+ <a href="index.html" class="logo">
+  <img src="./image/logo.png" alt="Bharathi Furniture Logo">
+</a>
 
     <nav class="nav">
 
@@ -123,6 +123,214 @@
 
   </section>
 
+
+
+<!-- =========================================================
+     09 - SCROLL REVEAL COLLECTION
+========================================================= -->
+
+<section class="cinematic-collection">
+
+  <div class="cinematic-title reveal-up">
+
+    <span>CURATED FOR YOUR HOME</span>
+
+    <h2>
+      Discover furniture
+      <em>through every detail.</em>
+    </h2>
+
+  </div>
+
+
+  <!-- ITEM 01 -->
+
+  <article class="cinematic-item">
+
+    <div class="cinematic-image reveal-left">
+
+      <img
+        src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1500&q=90"
+        alt="Luxury Sofa"
+      >
+
+      <span class="cinematic-index">
+        01
+      </span>
+
+    </div>
+
+
+    <div class="cinematic-copy reveal-right">
+
+      <span class="cinematic-small">
+        LIVING COLLECTION
+      </span>
+
+      <h3>
+        Comfort that
+        <em>welcomes you home.</em>
+      </h3>
+
+      <p>
+        Elegant sofas designed with soft textures,
+        balanced proportions and comfort made for
+        everyday living.
+      </p>
+
+      <a href="products.html">
+        Explore Sofas
+        <span>↗</span>
+      </a>
+
+    </div>
+
+  </article>
+
+
+
+  <!-- ITEM 02 -->
+
+  <article class="cinematic-item cinematic-reverse">
+
+    <div class="cinematic-image reveal-right">
+
+      <img
+        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1500&q=90"
+        alt="Luxury Bedroom"
+      >
+
+      <span class="cinematic-index">
+        02
+      </span>
+
+    </div>
+
+
+    <div class="cinematic-copy reveal-left">
+
+      <span class="cinematic-small">
+        BEDROOM COLLECTION
+      </span>
+
+      <h3>
+        Designed for
+        <em>beautiful rest.</em>
+      </h3>
+
+      <p>
+        Calm forms, warm materials and thoughtfully
+        designed bedroom furniture for peaceful spaces.
+      </p>
+
+      <a href="products.html">
+        Explore Bedroom
+        <span>↗</span>
+      </a>
+
+    </div>
+
+  </article>
+
+
+
+  <!-- ITEM 03 -->
+
+  <article class="cinematic-item">
+
+    <div class="cinematic-image reveal-left">
+
+      <img
+        src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1500&q=90"
+        alt="Dining Collection"
+      >
+
+      <span class="cinematic-index">
+        03
+      </span>
+
+    </div>
+
+
+    <div class="cinematic-copy reveal-right">
+
+      <span class="cinematic-small">
+        DINING COLLECTION
+      </span>
+
+      <h3>
+        Created for
+        <em>moments together.</em>
+      </h3>
+
+      <p>
+        Refined dining furniture that transforms
+        everyday meals into meaningful moments.
+      </p>
+
+      <a href="products.html">
+        Explore Dining
+        <span>↗</span>
+      </a>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+
+<!-- =========================================================
+     10 - CINEMATIC SHOWROOM CTA
+========================================================= -->
+
+<section class="showroom-cinematic">
+
+  <div class="showroom-bg">
+
+    <img
+      src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=90"
+      alt="Bharathi Furniture Showroom"
+    >
+
+  </div>
+
+  <div class="showroom-dark"></div>
+
+
+  <div class="showroom-content showroom-reveal">
+
+    <span>
+      EXPERIENCE BHARATHI
+    </span>
+
+    <h2>
+      Furniture deserves
+      <em>to be experienced.</em>
+    </h2>
+
+    <p>
+      Feel the textures. Experience the comfort.
+      Discover furniture that belongs in your home.
+    </p>
+
+    <a href="contact.html">
+
+      Visit Our Showroom
+
+      <i>→</i>
+
+    </a>
+
+  </div>
+
+
+  <div class="showroom-scroll-text">
+    BHARATHI • FURNITURE • MADURAI •
+  </div>
+
+</section>
 
 
   <!-- =====================================
@@ -1331,6 +1539,170 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+
+    /* ================================
+       SCROLL REVEAL
+    ================================ */
+
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal-up, .reveal-left, .reveal-right"
+      );
+
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        function(entries) {
+
+          entries.forEach(
+            function(entry) {
+
+              if (entry.isIntersecting) {
+
+                entry.target
+                  .classList
+                  .add("reveal-visible");
+
+                revealObserver
+                  .unobserve(entry.target);
+
+              }
+
+            }
+          );
+
+        },
+
+        {
+          threshold: 0.15
+        }
+
+      );
+
+
+    revealElements.forEach(
+      function(element) {
+
+        revealObserver
+          .observe(element);
+
+      }
+    );
+
+
+    /* ================================
+       SHOWROOM REVEAL
+    ================================ */
+
+    const showroomContent =
+      document.querySelector(
+        ".showroom-reveal"
+      );
+
+
+    if (showroomContent) {
+
+      const showroomObserver =
+        new IntersectionObserver(
+
+          function(entries) {
+
+            entries.forEach(
+              function(entry) {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  showroomContent
+                    .classList
+                    .add("show");
+
+                  showroomObserver
+                    .disconnect();
+
+                }
+
+              }
+            );
+
+          },
+
+          {
+            threshold: 0.25
+          }
+
+        );
+
+
+      showroomObserver.observe(
+        showroomContent
+      );
+
+    }
+
+
+    /* ================================
+       SUBTLE IMAGE PARALLAX
+    ================================ */
+
+    const showroomImage =
+      document.querySelector(
+        ".showroom-bg img"
+      );
+
+
+    window.addEventListener(
+      "scroll",
+      function () {
+
+        if (!showroomImage) return;
+
+
+        const showroom =
+          document.querySelector(
+            ".showroom-cinematic"
+          );
+
+
+        const rect =
+          showroom
+            .getBoundingClientRect();
+
+
+        if (
+          rect.top <
+          window.innerHeight &&
+          rect.bottom > 0
+        ) {
+
+          const movement =
+            rect.top * 0.07;
+
+
+          showroomImage.style.transform =
+            `scale(1.08)
+             translateY(${movement}px)`;
+
+        }
+
+      },
+
+      {
+        passive: true
+      }
+
+    );
+
+  }
+);
 
 </script>
 
