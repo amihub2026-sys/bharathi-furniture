@@ -263,12 +263,21 @@
     <!-- GOOGLE MAP -->
 
     <div class="showroom-map">
+
+      <iframe
+  src="https://www.google.com/maps?q=46-A%2C%20Keelvasal%2C%20Lakshmipuram%20Cross%20St%2C%20Lakshmipuram%2C%20Tamil%20Nadu%20625001&output=embed"
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  title="Bharathi Furniture Location"
+></iframe>
+
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.1834755658992!2d78
 .1267311!3d9.918672400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c59c0a8
 7d017%3A0x848a0d98599fbd8f!2sBharathi%20Furniture%20%26%20Appliances
 !5e0!3m2!1sen!2sin!4v1788326227232!5m2!1sen!2sin"
  width="600" height="450" style="border:0;" allowfullscreen="" 
  loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
 
 
       <div class="map-corner-label">
@@ -341,23 +350,39 @@
 
 
 
-      <div class="showroom-detail-row">
+ <!-- LOCATION -->
+<div class="showroom-detail-row">
+  <i class="fa-solid fa-location-dot"></i>
 
-        <i class="fa-solid fa-phone"></i>
+  <div>
+    <span>LOCATION</span>
 
-        <div>
+    <strong>
+      46-A, Keelvasal, Lakshmipuram Cross St,<br />
+      Lakshmipuram, Tamil Nadu 625001
+    </strong>
+  </div>
+</div>
 
-          <span>
-            CALL SHOWROOM
-          </span>
+
+<!-- PHONE NUMBER -->
+<div class="showroom-detail-row">
+  <i class="fa-solid fa-phone"></i>
 
           <strong>
             +91 9786838315
           </strong>
 
-        </div>
+  <div>
+    <span>CALL SHOWROOM</span>
 
-      </div>
+    <strong>
+      <a href="tel:+919344035451">
+        +91 93440 35451
+      </a>
+    </strong>
+  </div>
+</div>
 
 
 
@@ -378,11 +403,22 @@
         </div>
 
       </div>
+    <a
+  href="https://www.google.com/maps/search/?api=1&query=46-A%2C+Keelvasal%2C+Lakshmipuram+Cross+St%2C+Lakshmipuram%2C+Tamil+Nadu+625001"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="showroom-map-button"
+>
+  Open in Google Maps
+  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
 
-
+<a
+        href="https://www.google.com/maps/search/?api=1&query=Madurai+Tamil+Nadu"
 
       <a
         href="https://maps.app.goo.gl/3T3YD2x55nECNk9C7"
+
         target="_blank"
         rel="noopener noreferrer"
         class="showroom-map-button"
@@ -438,6 +474,14 @@
         <span>Facebook</span>
       </a>
 
+      <a
+  href="https://wa.me/919344035451?text=Hello%20Bharathi%20Furniture%2C%20I%20would%20like%20to%20know%20more%20about%20your%20furniture."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with Bharathi Furniture on WhatsApp"
+>
+  <i class="fa-brands fa-whatsapp"></i>
+  <span>WhatsApp</span>
       <a href="https://wa.me/919786838315"
    target="_blank"
    rel="noopener noreferrer"
@@ -445,7 +489,6 @@
 
   <i class="fa-brands fa-whatsapp"></i>
   <span>WhatsApp</span>
-
 </a>
 
       <a href="#" aria-label="YouTube">
@@ -551,12 +594,19 @@
 
 
 
-    <div class="footer-column">
+ <div class="footer-column">
+  <h3>Contact</h3>
 
-      <h3>
-        Contact
-      </h3>
+  <p>
+    46-A, Keelvasal, Lakshmipuram Cross St,<br />
+    Lakshmipuram, Tamil Nadu 625001
+  </p>
 
+  <p>
+    <a href="tel:+919344035451">
+      +91 93440 35451
+    </a>
+  </p>
       <p>
         46-A, Keelvasal, Lakshmipuram Cross St,
          Lakshmipuram, Tamil Nadu 625001
@@ -570,7 +620,9 @@
         info@bharathifurniture.com
       </p>
 
-    </div>
+
+  <p>info@bharathifurniture.com</p>
+</div>
 
   </div>
 
@@ -677,6 +729,33 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
 });
+
+
+function addWhatsAppButton() {
+  const whatsappButton = document.createElement("a");
+
+  whatsappButton.href =
+    "https://wa.me/919344035451?text=Hello%20Bharathi%20Furniture%2C%20I%20would%20like%20to%20know%20more%20about%20your%20furniture.";
+
+  whatsappButton.className = "floating-whatsapp";
+  whatsappButton.target = "_blank";
+  whatsappButton.rel = "noopener noreferrer";
+  whatsappButton.setAttribute("aria-label", "Chat with Bharathi Furniture on WhatsApp");
+
+  whatsappButton.innerHTML = `
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M16 3a12.8 12.8 0 0 0-11 19.3L3.4 28.6l6.5-1.7A12.9 12.9 0 1 0 16 3Zm0 23.3c-2 0-3.9-.5-5.5-1.5l-.4-.2-3.8 1 1-3.7-.3-.4a10.4 10.4 0 1 1 9 4.8Zm5.7-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.7.1-1.8-.9-3-1.6-4.2-3.6-.3-.6.3-.5.9-1.7.1-.2.1-.4 0-.6l-1-2.5c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.5 3.8 6 5.3 2.2.9 3.1 1 4.2.8 1.3-.2 1.9-.8 2.2-1.6.3-.8.3-1.4.2-1.6-.2-.2-.5-.3-.8-.4Z"/>
+    </svg>
+  `;
+
+  document.body.appendChild(whatsappButton);
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", addWhatsAppButton);
+} else {
+  addWhatsAppButton();
+}
 </script>
 
 </body>

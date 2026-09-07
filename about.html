@@ -572,12 +572,22 @@
       </div>
 
 
-      <div class="footer-column">
-        <h3>Contact</h3>
-        <p>Madurai, Tamil Nadu</p>
-        <p>+91 00000 00000</p>
-        <p>info@bharathifurniture.com</p>
-      </div>
+     <div class="footer-column">
+  <h3>Contact</h3>
+
+  <p>
+    46-A, Keelvasal, Lakshmipuram Cross St,<br />
+    Lakshmipuram, Tamil Nadu 625001
+  </p>
+
+  <p>
+    <a href="tel:+919344035451">
+      +91 93440 35451
+    </a>
+  </p>
+
+  <p>info@bharathifurniture.com</p>
+</div>
 
     </div>
 
@@ -913,6 +923,33 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
 });
+
+
+function addWhatsAppButton() {
+  const whatsappButton = document.createElement("a");
+
+  whatsappButton.href =
+    "https://wa.me/919344035451?text=Hello%20Bharathi%20Furniture%2C%20I%20would%20like%20to%20know%20more%20about%20your%20furniture.";
+
+  whatsappButton.className = "floating-whatsapp";
+  whatsappButton.target = "_blank";
+  whatsappButton.rel = "noopener noreferrer";
+  whatsappButton.setAttribute("aria-label", "Chat with Bharathi Furniture on WhatsApp");
+
+  whatsappButton.innerHTML = `
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M16 3a12.8 12.8 0 0 0-11 19.3L3.4 28.6l6.5-1.7A12.9 12.9 0 1 0 16 3Zm0 23.3c-2 0-3.9-.5-5.5-1.5l-.4-.2-3.8 1 1-3.7-.3-.4a10.4 10.4 0 1 1 9 4.8Zm5.7-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.7.1-1.8-.9-3-1.6-4.2-3.6-.3-.6.3-.5.9-1.7.1-.2.1-.4 0-.6l-1-2.5c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.5 3.8 6 5.3 2.2.9 3.1 1 4.2.8 1.3-.2 1.9-.8 2.2-1.6.3-.8.3-1.4.2-1.6-.2-.2-.5-.3-.8-.4Z"/>
+    </svg>
+  `;
+
+  document.body.appendChild(whatsappButton);
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", addWhatsAppButton);
+} else {
+  addWhatsAppButton();
+}
 </script>
 
 </body>
