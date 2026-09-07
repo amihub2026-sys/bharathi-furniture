@@ -6653,7 +6653,7 @@ button, a {
   position: relative;
 
   padding:
-    120px 7%;
+    60px 7%;
 
   overflow: hidden;
 
@@ -6852,7 +6852,7 @@ button, a {
   grid-template-columns:
     1.35fr 0.65fr;
 
-  min-height: 600px;
+  min-height: 300px;
 }
 
 
@@ -6863,7 +6863,7 @@ button, a {
 .showroom-map {
   position: relative;
 
-  min-height: 600px;
+  min-height: 500px;
 
   overflow: hidden;
 
