@@ -448,7 +448,7 @@ button, a {
 }
 
 .about-image-main {
-  width: 78%;
+  width: 98%;
   height: 580px;
 }
 
@@ -980,17 +980,36 @@ button, a {
 
 .product-image {
   position: relative;
+  width: 100%;
   height: 460px;
+
   overflow: hidden;
-  background: #eee;
+  background: #f4eee7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+
+/* SAME AREA FOR ALL PRODUCT IMAGES */
 .product-image img {
-  transition: 0.7s;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  /* padding: 18px; */
+
+  display: block;
+
+  transition: transform 0.7s ease;
 }
+
 
 .product-card:hover .product-image img {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 
 .product-tag {
@@ -2453,7 +2472,7 @@ button, a {
   position: absolute;
   inset: 0;
   background: url(
-      "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&w=1800&q=90"
+      "./image/aboutbg.png"
     )
     center / cover
     no-repeat;
@@ -2997,22 +3016,29 @@ button, a {
 
 .sofa-main-image {
   position: relative;
+  width: 100%;
   height: 610px;
   overflow: hidden;
-  background: #ddd2c7;
+  background: #f8f4ee;
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sofa-main-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   display: block;
-  transition: opacity 0.3s ease,
-    transform 0.7s ease;
+  transition: transform 0.6s ease;
 }
 
 .sofa-main-image:hover img {
-  transform: scale(1.03);
+  transform: scale(1.015);
 }
 
 .sofa-image-label {
@@ -3077,7 +3103,9 @@ button, a {
 .sofa-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  background: #f8f4ee;
   display: block;
   transition: 0.5s ease;
 }
@@ -3144,7 +3172,7 @@ button, a {
 .collection-hero-bg {
   position: absolute;
   inset: 0;
-  background: url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=2000&q=90")
+  background: url("./image/sofa4.png")
     center / cover no-repeat;
   animation: collectionHeroZoom
     14s ease-in-out
@@ -3990,7 +4018,7 @@ button, a {
 .products-hero-bg {
   position: absolute;
   inset: 0;
-  background: url("https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=2000&q=90")
+  background: url("./image/homebg.jpg")
     center / cover no-repeat;
   animation: productHeroZoom
     14s ease-in-out
@@ -4510,7 +4538,7 @@ button, a {
 .contact-bg {
   position: absolute;
   inset: 0;
-  background: url("https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=2000&q=90")
+  background: url("./image/homebg.jpg")
     center / cover no-repeat;
   transform: scale(1.04);
 }
@@ -6358,7 +6386,7 @@ button, a {
   inset: 0;
 
   background:
-    url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2000&q=90")
+    url("./image/home.jpg")
     center / cover
     no-repeat;
 
@@ -8490,36 +8518,37 @@ button, a {
 
 
 /* MATERIAL IMAGE */
+/* MATERIAL IMAGE */
 
 .material-preview {
   position: relative;
-
-  min-height: 490px;
-
+  width: 100%;
+  height: 560px;
   overflow: hidden;
+  background: #f8f1e8;
 }
-
 
 .material-preview img {
   position: absolute;
-
   inset: 0;
 
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+
+  /* padding: 20px; */
 
   transition:
-    opacity .3s ease,
-    transform .6s ease;
+    opacity 0.3s ease,
+    transform 0.6s ease;
 }
 
 
 .material-preview:hover img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
-
 
 .material-preview-overlay {
   position: absolute;
@@ -9780,15 +9809,15 @@ button, a {
 .cinematic-image {
   position: relative;
 
-  height: 650px;
+  height: 500px;
 
   overflow: hidden;
 }
 
 
 .cinematic-image img {
-  width: 100%;
-  height: 115%;
+  width: 90%;
+  height: 100%;
 
   object-fit: cover;
 
@@ -10593,3 +10622,190 @@ button, a {
   }
 }
 
+
+.bharathi-home-section {
+  position: relative;
+  padding: 120px 7%;
+
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 100px;
+
+  background:
+    linear-gradient(
+      rgba(35, 20, 14, 0.78),
+      rgba(35, 20, 14, 0.82)
+    ),
+    url("./image/about.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: #fff;
+  overflow: hidden;
+}
+
+.bharathi-home-heading {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+}
+
+.bharathi-home-heading > span {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: #e1b991;
+}
+
+.bharathi-home-heading h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(54px, 5.4vw, 82px);
+  line-height: .95;
+  font-weight: 500;
+
+  color: #fff;
+}
+
+.bharathi-home-heading h2 em {
+  display: block;
+  margin-top: 8px;
+
+  color: #e0ae82;
+  font-weight: 400;
+}
+
+.bharathi-home-heading p {
+  max-width: 500px;
+
+  margin-top: 28px;
+
+  font-size: 14px;
+  line-height: 1.9;
+
+  color: rgba(255,255,255,.72);
+}
+
+.bharathi-home-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.bharathi-home-card {
+  position: relative;
+
+  padding: 45px 45px 45px 110px;
+
+  background: #fffaf5;
+
+  border-bottom: 1px solid #d7c5b6;
+
+  transition: .4s ease;
+}
+
+.bharathi-home-card:hover {
+  transform: translateX(-10px);
+  background: #2f1d15;
+}
+
+.bharathi-home-card {
+  position: relative;
+
+  padding: 45px 45px 45px 110px;
+
+  background: rgba(255,255,255,.10);
+
+  border: 1px solid rgba(255,255,255,.14);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: .4s ease;
+}
+
+.bharathi-home-card:hover {
+  transform: translateX(-10px);
+
+  background: rgba(255,255,255,.18);
+}
+
+.bharathi-home-card h3 {
+  color: #fff;
+}
+
+.bharathi-home-card p {
+  color: rgba(255,255,255,.68);
+}
+
+.bharathi-home-number {
+  color: #e0ae82;
+}
+.bharathi-home-card:hover h3 {
+  color: #fff;
+}
+
+.bharathi-home-card:hover p {
+  color: rgba(255,255,255,.65);
+}
+
+.bharathi-home-card:hover .bharathi-home-number {
+  color: #d8ad89;
+}
+
+@media (max-width: 850px) {
+
+  .bharathi-home-section {
+    grid-template-columns: 1fr;
+    gap: 50px;
+
+    padding: 80px 24px;
+  }
+
+  .bharathi-home-heading {
+    position: relative;
+    top: auto;
+  }
+
+  .bharathi-home-card {
+    padding: 80px 25px 30px;
+  }
+
+  .bharathi-home-number {
+    left: 25px;
+    top: 25px;
+  }
+
+}
+.cinematic-image {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cinematic-image img {
+  width: 90%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  transform: none;
+
+  transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+
+.cinematic-image:hover img {
+  transform: scale(1.03);
+}
