@@ -544,12 +544,35 @@
 
     </div>
 
-    <div class="signature-image">
-      <img
-        src="./image/homebg.jpg"
-        alt="Signature furniture collection"
-      />
-    </div>
+    <div class="signature-image signature-slider">
+  
+  <div class="slide active">
+    <img src="./image/wobgsofa.png" alt="Product 1" />
+  </div>
+
+  <div class="slide">
+    <img src="./image/wobgpooja.png" alt="Product 2" />
+  </div>
+
+  <div class="slide">
+    <img src="./image/wobgcupboard.png" alt="Product 3" />
+  </div>
+
+  <div class="slide">
+    <img src="./image/wobgtable.png" alt="Product 4" />
+  </div>
+
+  <div class="slider-dots">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+    <span class="dot" data-index="3"></span>
+  </div>
+
+</div>
+
+
+
   </section>
 
 
@@ -977,8 +1000,6 @@ if (statsSection) {
 
 }
 
-</script>
-<script>
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -1243,6 +1264,44 @@ if (document.readyState === "loading") {
 } else {
   addWhatsAppButton();
 }
+
+  const slides = document.querySelectorAll(".signature-slider .slide");
+  const dots = document.querySelectorAll(".signature-slider .dot");
+
+  let currentSlide = 0;
+  let sliderInterval;
+
+  function showSlide(index) {
+    slides.forEach((slide) => slide.classList.remove("active"));
+    dots.forEach((dot) => dot.classList.remove("active"));
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }
+
+  function startSlider() {
+    sliderInterval = setInterval(nextSlide, 3500);
+  }
+
+  function resetSlider() {
+    clearInterval(sliderInterval);
+    startSlider();
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showSlide(index);
+      resetSlider();
+    });
+  });
+
+  startSlider();
 
 </script>
 
