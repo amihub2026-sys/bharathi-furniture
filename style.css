@@ -53,7 +53,12 @@ button, a {
   width: 100%;
   height: 90px;
   padding: 0 6%;
-  position: absolute;
+  position: fixed;
+    background: rgba(58, 33, 23, 0.58);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: var(--brown-dark);
   top: 0;
   left: 0;
   z-index: 20;
@@ -5531,6 +5536,125 @@ button, a {
 }
 
 @media (max-width: 600px) {
+
+  .categories.section {
+    padding: 60px 18px;
+  }
+
+  .categories .section-heading {
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  .categories .section-heading p {
+    margin-top: 12px;
+  }
+
+  .categories .category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+
+    width: 100%;
+    padding: 0;
+  }
+
+  .categories .category-flip-card,
+  .categories .category-large {
+    width: 100%;
+    height: 430px;
+
+    margin: 0;
+    border-radius: 22px;
+    overflow: hidden;
+  }
+
+  .categories .category-flip-inner {
+    width: 100%;
+    height: 100%;
+
+    transform: none !important;
+  }
+
+  .categories .category-flip-front {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transform: none !important;
+    backface-visibility: visible;
+  }
+
+  .categories .category-flip-back {
+    display: none;
+  }
+
+  .categories .category-flip-front img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+  }
+
+  .categories .category-front-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(34, 18, 10, 0.88) 0%,
+        rgba(34, 18, 10, 0.38) 48%,
+        rgba(34, 18, 10, 0.05) 100%
+      );
+  }
+
+  .categories .category-front-content {
+    position: absolute;
+
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+
+    z-index: 3;
+  }
+
+  .categories .category-front-content > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #e6b88e;
+  }
+
+  .categories .category-front-content h3 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+    font-size: 36px;
+    line-height: 1.05;
+
+    color: #ffffff;
+  }
+
+  .categories .category-front-content small {
+    display: inline-flex;
+    margin-top: 14px;
+
+    font-size: 12px;
+    color: rgba(255,255,255,0.85);
+  }
+
+}
+
+
+@media (max-width: 600px) {
   .hero {
     min-height: 100svh;
     align-items: flex-end;
@@ -5881,72 +6005,110 @@ button, a {
   .furniture-category-card:active .category-card-content {
     transform: translateY(0) !important;
   }
-   .about-values {
-    width: 100%;
-    padding: 45px 20px !important;
+
+
+
+
+
+  .about-values {
+    padding: 60px 20px;
+    box-sizing: border-box;
     overflow: hidden;
   }
 
   .about-values-head {
     width: 100%;
-    margin-bottom: 35px !important;
-  }
-
-  .about-values-eyebrow {
-    font-size: 10px;
-    letter-spacing: 2px;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 40px;
   }
 
   .about-values-head h2 {
-    margin: 15px 0 20px;
-    font-size: 36px !important;
-    line-height: 0.98;
+    font-size: 38px;
+    line-height: 1.08;
   }
 
   .about-values-head p {
-    max-width: 100%;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.7;
   }
 
   .about-values-line {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+
     width: 100%;
-    padding: 0 !important;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+
+    border-left: none;
   }
 
   .about-value-item {
     width: 100%;
-    min-height: 0 !important;
-    padding: 22px 0 22px 90px !important;
-    margin: 0 !important;
+    max-width: 100%;
+
+    padding: 32px 0;
+    margin: 0;
+
+    text-align: left;
+
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+
+    box-sizing: border-box;
+  }
+
+  .about-value-item:last-child {
+    border-bottom: none;
   }
 
   .value-icon {
-    left: 0 !important;
-    width: 58px !important;
-    height: 58px !important;
-  }
-
-  .value-icon svg {
-    width: 23px;
-    height: 23px;
+    margin: 0 0 18px;
   }
 
   .value-number {
-    font-size: 10px;
+    display: block;
+    margin-bottom: 10px;
   }
 
   .about-value-item h3 {
-    margin: 8px 0 10px;
-    font-size: 24px !important;
+    margin: 0 0 12px;
+
+    font-size: 28px;
     line-height: 1.1;
   }
 
   .about-value-item p {
+    width: 100%;
     max-width: 100%;
-    font-size: 12px;
-    line-height: 1.6;
+
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.7;
   }
+
+  .about-values-line::before,
+  .about-values-line::after,
+  .about-value-item::before,
+  .about-value-item::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .about-values-line {
+    border-left: none !important;
+    border-right: none !important;
+  }
+
+  .about-value-item {
+    border-left: none !important;
+    border-right: none !important;
+  }
+
 
 
   .about-values-line::before {
@@ -8276,7 +8438,12 @@ button, a {
     padding:
       0 20px;
 
-    position: absolute;
+    position: fixed;
+
+      background: rgba(58, 33, 23, 0.58);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 
     display: flex;
 
@@ -9864,19 +10031,35 @@ button, a {
 
 
   .material-section {
-    column-gap: 45px;
+    padding: 60px 20px;
+    box-sizing: border-box;
   }
-
 
   .material-header {
-    gap: 60px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
   }
 
-
-  .inspiration-grid {
-    height: 620px;
+  .material-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
+  .material-item {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .material-preview {
+    width: 100%;
+    margin-top: 35px;
+    box-sizing: border-box;
+  }
 }
 
 
@@ -12966,6 +13149,54 @@ button, a {
 
   .stage-title {
     font-size: 38px;
+  }
+
+}
+
+
+
+
+@media (max-width: 600px) {
+
+  .signature {
+    padding: 50px 18px;
+    box-sizing: border-box;
+  }
+
+  .signature-content {
+    padding: 0;
+    margin-bottom: 28px;
+  }
+
+  .signature-content h2 {
+    margin-top: 12px;
+  }
+
+  .signature-content p {
+    margin-top: 16px;
+    line-height: 1.7;
+  }
+
+  .signature-image {
+    width: 100%;
+    margin: 0;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .signature-slider {
+    width: 100%;
+  }
+
+  .signature-slider .slide {
+    width: 100%;
+  }
+
+  .signature-slider .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
   }
 
 }
